@@ -1,22 +1,12 @@
 #!/home/labuser/anaconda3/bin python3
 import storm
-import spacy
+
 
 
 
 class SplitSentenceBolt(storm.BasicBolt):
-	nlp = spacy.load('en_core_web_sm')
 	testmap={}
 	#procedure to find geonames in text using spacy library
-	def getLocation(self,text):
-		doc = self.nlp(text)
-		loc = ''
-		
-		for ent in doc.ents:
-			if(ent.label_== (u'GPE')):
-				loc = loc + ' ' + ent.text
-				self.testmap[ent.text]='GPE'
-		return loc
 	
 	def process(self, tup):
 		if tup.values[0]:
