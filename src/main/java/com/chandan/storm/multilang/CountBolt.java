@@ -61,7 +61,7 @@ public class CountBolt extends BaseRichBolt
     
     
     String customClassObj = tuple.getString(2);
-    ParagraphPojo obj = new Gson().fromJson(customClassObj, ParagraphPojo.class);
+    CustomClass obj = new Gson().fromJson(customClassObj, CustomClass.class);
     LOG.info("CustomClass obj {} ",obj.toString());
     
     Map<String,String> mapString = ( Map<String,String>) tuple.getValue(3); 

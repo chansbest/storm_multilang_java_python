@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 /**
  * custom class to test java-python-java object serialization and deserialization
- * @author chandan.bhatte
+ * @author chans
  *
  */
 public class CustomClass implements Serializable{

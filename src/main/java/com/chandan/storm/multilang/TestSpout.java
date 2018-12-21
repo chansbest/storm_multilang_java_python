@@ -26,7 +26,7 @@ public class TestSpout extends BaseRichSpout {
 	LinkedList<String> pythonList = new LinkedList<String>();
 	private SpoutOutputCollector collector;
 	ArrayList<String> testArrayList;
-	ParagraphPojo customClassObject = new ParagraphPojo();
+	CustomClass customClassObject = new CustomClass();
 	
 	private static final Logger LOG = LoggerFactory.getLogger(TestSpout.class);
 
@@ -34,14 +34,15 @@ public class TestSpout extends BaseRichSpout {
 	public void open(Map conf, TopologyContext context, SpoutOutputCollector collector) {
 		LOG.info("Inside TweetSpout.open ");
 		
-		pythonList.add("Janpad Adhyaksha of Gram Panchayat has decided to give reservation Satnami and Harijan in Ambikapur");
-		pythonList.add("Pornography, sex tourism are serious offence in Korba");
-		pythonList.add("extramarital Affairs with Play Boy are very common in Bijapur District");
-		pythonList.add(" organisation that supplies Cannabis,Cocaine,LSD,Opium,Morphine likes drugs which causes alarm in Raipur");
-		pythonList.add("various organisation like Ambuja Cements and Amrutanjan Healthcare took campaign in most parts of the Jagdalpur and Mungeli");
-		pythonList.add("thefts are increased causing fraud home invasions with cannon and coastal artillery were reported at Dantewada");
+		pythonList.add("Janpad Adhyaksha of Gram Panchayat has decided to give reservation Satnami and Harijan");
+		pythonList.add("extramarital Affairs with Play");
+		pythonList.add(" organisation that supplies Cannabis,Cocaine,LSD,Opium,Morphine");
+		pythonList.add("various organisation like Ambuja Cements and Amrutanjan Healthcare took campaign");
+		pythonList.add("thefts are increased causing fraud home invasions with cannon and coastal artillery");
 		this.collector = collector;
 	
+		
+		//list to send
 		testArrayList = new ArrayList<String>();
 		testArrayList.add("a");
 		testArrayList.add("b");
